@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+:root {
+  --dark-color: hsl(var(--hue), 100%, 9%);
+  --light-color: hsl(var(--hue), 95%, 98%);
+  --base: hsl(var(--hue), 95%, 50%);
+  --complimentary1: hsl(var(--hue-complimentary1), 95%, 50%);
+  --complimentary2: hsl(var(--hue-complimentary2), 95%, 50%);
+
+  --font-family: "Poppins", system-ui;
+
+  --bg-gradient: linear-gradient(
+    to bottom,
+    hsl(var(--hue), 95%, 99%),
+    hsl(var(--hue), 95%, 84%)
+  );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  max-width: 1920px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  font-family: var(--font-family);
+  color: var(--dark-color);
+  background: var(--bg-gradient);
+}
+
+.orb-canvas {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.overlay {
+  width: 100%;
+  max-width: 1140px;
+  max-height: 500px;
+  min-width: 840px;
+  min-height: 500px;
+  padding: 8rem 5rem; 
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  justify-content: space-between;
+}
+.overlay__inner .result
+{
+  width:50%
+}
+.overlay__inner {
+  max-width: 36rem;
+  margin-top: -6vh;
+}
+
+.overlay__title {
+  font-size: 1.875rem;
+  text-align: center;
+  line-height: 2.75rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+  letter-spacing: -0.025em;
+  margin-bottom: 2rem;
+}
+
+.text-gradient {
+  background-image: linear-gradient(
+    23deg,
+    var(--base) 25%,
+    var(--complimentary2)
+  );
+
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+
+.overlay__btns {
+  width: 100%;
+  max-width: 55rem;
+  min-width: 27rem;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom : -0.7rem;
+}
+.input-wrapper{
+  margin-left: 1vw;
+  justify-content: space-around;
+  margin-bottom: 0.7rem;
+}
+.input-field
+{
+  color: #000000;
+  border-radius: 0.5rem;
+  border:s1.9px solid #000;
+  height: 2.5rem;
+  min-width: 95%;
+  background-color: transparent;
+  font-family: "Poppins";
+  padding-left: 0.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 0.5rem;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.input-field:focus
+{
+  font-weight: 500;
+  color: #000000;
+  border-width: 2.5px;
+}
+
+.overlay__btn {
+  width: 50%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--light-color);
+  background: var(--dark-color);
+  border: none;
+  border-radius: 0.5rem;
+  transition: transform 150ms ease;
+  outline-color: hsl(var(--hue), 95%, 50%);
+}
+
+.overlay__btn:hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.overlay__btn--transparent {
+  background: transparent;
+  color: var(--dark-color);
+  border: 2px solid var(--dark-color);
+  border-width: 2px;
+  margin-right: 0.75rem;
+}
+
+#result
+{
+  margin-top: 1vh;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (prefers-contrast: high) {
+  .orb-canvas {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1140px) {
+  .overlay {
+    padding: 8rem 4rem;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  body {
+    padding: 1.5rem;
+  }
+
+  .overlay {
+    padding: 4rem;
+    height: auto;
+  }
+
+  .overlay__title {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .overlay__description {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .overlay {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 50px;
+    max-height: 2000px;
+  }
+  .overlay__inner {
+  max-width: 36rem;
+  margin-top: 1vh;
+  }
+  .overlay__btns {
+    flex-wrap: wrap;
+  }
+
+  .overlay__btn {
+    width: 100%;
+    font-size: 0.75rem;
+    margin-right: 0;
+  }
+
+  .overlay__btn:first-child {
+    margin-bottom: 1rem;
+  }
+  
+  #result{
+    margin-top:10vh;
+    margin-bottom:8vh;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" style="--hue: 269; --hue-complimentary1: 299; --hue-complimentary2: 329;">
+<head>
+  <meta charset="UTF-8">
+  <title>YouTube Categorizer</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body translate="no">
+<canvas class="orb-canvas" width="1366" height="596" style="touch-action: none; cursor: inherit;"></canvas>
+
+<div class="overlay">
+
+  <div class="overlay__inner">
+    
+    <h1 class="overlay__title">
+      <span class="text-gradient">YouTube</span>   Video Categorizer
+    </h1>
+
+    <div class="input-wrapper">
+      <span><input type="text" id="videoUrl" placeholder="Enter YouTube video Link" class="input-field"></span>
+    </div>
+   
+    <div class="overlay__btns">
+
+      <button class="overlay__btn overlay__btn--transparent">
+        <a href="https://github.com/21R01A7263" target="_blank">
+
+          View GitHub
+        </a>
+      </button>
+
+      <button class="overlay__btn overlay__btn--colors" id="videoFetch">
+        <span>Fetch</span>
+      </button>
+      
+    </div>
+    
+  
+  </div>
+  
+  <div id="result" class="result"></div>
+   
+</div>
+
+<script src="./scripts.js"></script>
+
+</body>
+
+</html>
