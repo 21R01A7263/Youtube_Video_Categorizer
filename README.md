@@ -7,7 +7,7 @@
 </p>
   
 <h2 align="center">Preview</h2>
-<a href="https://youtube-categorizer.vercel.app/" ><p align="center">Preview Here</p></a>
+<a href="https://youtube-video-categorizer.vercel.app/" ><p align="center">Preview Here</p></a>
 <br>
 
 <hr>
