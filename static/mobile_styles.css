@@ -1,3 +1,6 @@
+.text-gradient{
+    -webkit-background-clip: text;
+}
 .overlay__btns{
     gap: 1rem;
 
