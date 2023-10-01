@@ -1,0 +1,45 @@
+.text-gradient{
+    -webkit-background-clip: text;
+}
+.overlay__btns{
+    gap: 1rem;
+
+    /* margin-left: 1vw; */
+}
+.overlay__btn--transparent{
+    margin-right: 0;
+}
+
+.overlay__btn{
+    width: 48%;
+}
+
+.input-field{
+    min-width: 100%;
+}
+
+@media only screen  and (max-width: 991px) {
+    .overlay{
+        flex-direction: column;
+        max-height: unset;
+        gap: 13vw;
+    }
+
+    .overlay__title{
+        font-size: 1.575rem;
+    }
+    .overlay__inner{
+        margin-top: 0;
+        transform: scale(1.5);
+    }
+    .result{
+        font-size: 1.7rem;
+    }
+    .input-field{
+        width: 100%;
+    }
+    .input-wrapper,
+    .overlay__btns{
+        margin-left: 0;
+    }
+}
