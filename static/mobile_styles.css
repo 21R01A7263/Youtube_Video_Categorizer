@@ -3,8 +3,6 @@
 }
 .overlay__btns{
     gap: 1rem;
-
-    /* margin-left: 1vw; */
 }
 .overlay__btn--transparent{
     margin-right: 0;
